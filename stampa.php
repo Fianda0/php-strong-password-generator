@@ -1,10 +1,12 @@
 <?php
 $testo = $_GET['testo'];
 $password = '';
-$minucole = 'abcdefghijklmnopqrstuvxyz';
+$random = '';
+$minuscole = 'abcdefghijklmnopqrstuvxyz';
 $maiuscole = 'ABCDEFGHIJKLMNOPQRSTUVXYZ';
 $numeri = '0123456789';
-$simboli = '!@#$%^&*()-_=+[{]};:",<.>/?'
+$simboli = '!@#$%^&*()-_=+[{]};:",<.>/?';
+$caratteri = $minuscole . $maiuscole . $numeri . $simboli;
 ?>
 
 <!DOCTYPE html>
@@ -19,12 +21,13 @@ $simboli = '!@#$%^&*()-_=+[{]};:",<.>/?'
 
 <body>
 
-    <h1>Il testo è lungo:</h1>
+    <h1>La tua password è:</h1>
     <?php
     for ($i = 1; $i <= $testo; $i++) {
-        $password = $password . 'x';
+        $random =  rand(0, strlen($caratteri) - 1);
+        $password = $password . $caratteri[$random];
     }
-    echo $maiuscole[6];
+    echo $password;
     ?>
 </body>
 
