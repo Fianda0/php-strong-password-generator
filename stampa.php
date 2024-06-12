@@ -7,6 +7,12 @@ $maiuscole = 'ABCDEFGHIJKLMNOPQRSTUVXYZ';
 $numeri = '0123456789';
 $simboli = '!@#$%^&*()-_=+[{]};:",<.>/?';
 $caratteri = $minuscole . $maiuscole . $numeri . $simboli;
+
+function randomNumber($min, $max)
+{
+    return rand($min, $max);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +30,7 @@ $caratteri = $minuscole . $maiuscole . $numeri . $simboli;
     <h1>La tua password è:</h1>
     <?php
     for ($i = 1; $i <= $testo; $i++) {
-        $random =  rand(0, strlen($caratteri) - 1);
+        $random = randomNumber(0, strlen($caratteri) - 1);
         $password = $password . $caratteri[$random];
     }
     echo $password;
