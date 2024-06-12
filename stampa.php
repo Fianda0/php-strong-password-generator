@@ -1,5 +1,6 @@
 <?php
-$testo = $_GET['testo']
+$testo = $_GET['testo'];
+$password = '';
 ?>
 
 <!DOCTYPE html>
@@ -17,8 +18,9 @@ $testo = $_GET['testo']
     <h1>Il testo è lungo:</h1>
     <?php
     for ($i = 1; $i <= $testo; $i++) {
-        echo 'x';
+        $password = $password . 'x';
     }
+    echo $password;
     ?>
 </body>
 
