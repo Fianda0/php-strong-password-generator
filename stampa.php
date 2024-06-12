@@ -1,6 +1,10 @@
 <?php
 $testo = $_GET['testo'];
 $password = '';
+$minucole = 'abcdefghijklmnopqrstuvxyz';
+$maiuscole = 'ABCDEFGHIJKLMNOPQRSTUVXYZ';
+$numeri = '0123456789';
+$simboli = '!@#$%^&*()-_=+[{]};:",<.>/?'
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +24,7 @@ $password = '';
     for ($i = 1; $i <= $testo; $i++) {
         $password = $password . 'x';
     }
-    echo $password;
+    echo $maiuscole[6];
     ?>
 </body>
 
