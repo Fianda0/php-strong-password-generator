@@ -1,4 +1,6 @@
 <?php
+include './function.php';
+
 $testo = $_GET['testo'];
 $password = '';
 $random = '';
@@ -7,12 +9,6 @@ $maiuscole = 'ABCDEFGHIJKLMNOPQRSTUVXYZ';
 $numeri = '0123456789';
 $simboli = '!@#$%^&*()-_=+[{]};:",<.>/?';
 $caratteri = $minuscole . $maiuscole . $numeri . $simboli;
-
-function randomNumber($min, $max)
-{
-    return rand($min, $max);
-}
-
 ?>
 
 <!DOCTYPE html>
